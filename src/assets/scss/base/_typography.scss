@@ -15,9 +15,17 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%);
+    transition: all .5s ease;
 
     &--detail{
         color: var(--tertiary-color);
+    }
+
+    &:hover{
+        color: var(--main-color);
+        border: 1px solid var(--secondary-color);
+        background-color: var(--secondary-color);
+        padding: 30px;
     }
 }
 
@@ -31,7 +39,7 @@ body {
 
 .heading-tertiary{
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 

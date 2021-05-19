@@ -10,14 +10,14 @@
     <script defer="" src="/app.c3f9f951.js"></script>
 <script src="/all.6848176d.js"></script><script src="/main.90218242.js"></script></head>
 <body> 
-    <header class="header">
+    <header id="home" class="header">
         <nav class="nav">
             <section class="nav__section">
                 <a class="nav__btn">
                     <i class="nav__icon fas fa-bars"></i>
                 </a>
 
-                <h1 class="heading-primary">Sávio Azambuja<span class="heading-primary--detail">.</span></h1>
+                <a href="#home" class="logo__link"><h1 class="heading-primary">Sávio Azambuja<span class="heading-primary--detail">.</span></h1></a>
 
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -45,19 +45,39 @@
                     </a>
 
                     <ul class="menu__list">
-                        <a href="" class="menu__link">
+                        <a href="#home" class="menu__link">
                             <li class="menu__item">Home</li>
                         </a>
-                        <a href="" class="menu__link">
+                        <a href="#about" class="menu__link">
                             <li class="menu__item">About</li>
                         </a>
-                        <a href="" class="menu__link">
+                        <a href="#projects" class="menu__link">
                             <li class="menu__item">Projects</li>
                         </a>
-                        <a href="" class="menu__link">
+                        <a href="#career" class="menu__link">
+                            <li class="menu__item">Work & Education</li>
+                        </a>
+                        <a href="#footer" class="menu__link">
                             <li class="menu__item">Contact</li>
                         </a>
                     </ul>
+
+                    <article class="contact">
+                        <h3 class="contact-primary">hello@savioazambuja.com</h3>
+                        <h3 class="contact-primary">+55 21 996 010 863</h3>
+                        <small class="contact-secondary">Lisbon, PT</small>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="nav__link" href="#"><i class="nav__icon fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#"><i class="nav__icon fab fa-instagram"></i></a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" href="#"><i class="nav__icon fab fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </article>
                 </nav>
             </article>
         </section>
@@ -65,8 +85,8 @@
 
     </header>
     <main>
-        <section class="about">
-            <h3 class="heading-tertiary">
+        <section id="about" class="about">
+            <h3 class="heading-tertiary u-margin-bottom-small">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores odit repellat doloribus nesciunt tempora nostrum corporis, cum eius sint? Odio dolores odit repellat doloribus nesciunt tempora nostrum corporis, cum eius sint.
             </h3>
             <h3 class="heading-tertiary">
@@ -74,24 +94,27 @@
             </h3>
         </section>
 
-        <section class="projects">
-            <article class="projects__container projects__container--1 u-margin-top-medium u-margin-bottom-medium">
-                <h4 class="projects-primary">Os Melhores Anos</h4>
-                <p class="projects-secondary">E-book & Website</p>
-            </article>
+        <section id="projects" class="projects">
 
-            <article class="projects__container projects__container--2 u-margin-bottom-medium">
+            <h3 class="section-title u-margin-top-medium u-margin-bottom-medium">Projects</h3>
+
+            <a href="#" class="projects__container projects__container--1 u-margin-bottom-medium">
+                    <h4 class="projects-primary">Os Melhores Anos</h4>
+                    <p class="projects-secondary">E-book & Website</p>
+            </a>
+
+            <a href="#" class="projects__container projects__container--2 u-margin-bottom-medium">
                 <h4 class="projects-primary">Que Tal</h4>
                 <p class="projects-secondary">Packaging & Website</p>
-            </article>
+            </a>
 
-            <article class="projects__container projects__container--3 u-margin-bottom-medium">
+            <a href="#" class="projects__container projects__container--3 u-margin-bottom-medium">
                 <h4 class="projects-primary">Baixa Chiado Online</h4>
                 <p class="projects-secondary">Website</p>
-            </article>
+            </a>
         </section>
 
-        <section class="career">
+        <section id="career" class="career">
 
             <h3 class="section-title u-margin-top-medium u-margin-bottom-medium">Work & Education</h3>
 
@@ -122,7 +145,7 @@
             </article>
         </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <section class="footer__container">
 
             <article class="hello">
