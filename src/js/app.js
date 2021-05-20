@@ -1,26 +1,62 @@
-const menuBtn = document.querySelector('.nav__link');
+const openMenuBtn = document.querySelector('.nav__btn');
+const closeMenuBtn = document.querySelector('.menu__btn');
 const mainMenu = document.querySelector('.menu__hidden');
+const menuList = document.querySelector('.menu__list');
 
-const max = 100;
-let start = null; 
+let menuInitialPosition = -100;
 
-const showMenu = timestamp => {
+const showMenu = () => {
 
-    mainMenu.style.position = "fixed"
+    mainMenu.style.position = 'fixed';
 
-    if (!start) start = timestamp;
-    let progress = timestamp - start;
+    menuInitialPosition = menuInitialPosition + 4;
 
-    let newPosition = Math.min(progress / 5, max);
-    mainMenu.style.left = newPosition + '%';
+    mainMenu.style.left = menuInitialPosition + '%';
+    let ww = 0;
+    console.log(ww);
+    console.log(menuInitialPosition);
 
-    if(newPosition < max){
-        window.requestAnimationFrame(showMenu);
+    if (menuInitialPosition < ww) {
+        console.log(menuInitialPosition);
+        requestAnimationFrame(showMenu);
     }
+}
+
+const closeMenu = () => {
+
+    menuInitialPosition = menuInitialPosition - 4;
+
+    mainMenu.style.left = menuInitialPosition + '%'
+    let ww = -100;
+
+    if (menuInitialPosition > ww) {
+        window.requestAnimationFrame(closeMenu);
+    }
+
+    window.addEventListener('scroll', scrollListener);
 
 }
 
+const useMenu = () => {
 
-menuBtn.addEventListener('click', function(){
+    document.querySelector('.nav').style.position = 'absolute';
+    window.requestAnimationFrame(closeMenu);
+}
+
+const scrollListener = () => {
+    console.log('teste');
+    document.querySelector('.nav').style.position = 'fixed';
+    window.removeEventListener('scroll', scrollListener);
+}
+
+
+openMenuBtn.addEventListener('click', function(){
     window.requestAnimationFrame(showMenu);
 });
+
+closeMenuBtn.addEventListener('click', function (){
+    window.requestAnimationFrame(closeMenu);
+})
+
+menuList.addEventListener('click', useMenu);
+

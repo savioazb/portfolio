@@ -11,6 +11,10 @@
     padding: 0 10rem;
 }
 
+.logo__link{
+    color: var(--secondary-color);
+}
+
 .nav{
     width: 100%;
     padding: 2rem 10rem;
@@ -38,15 +42,23 @@
         }
     }
 
-    &__link{
+    &__link, &__btn{
         text-decoration: none;
-        color: var(--color-primary);
+        color: var(--secondary-color);
         background-color: var(--main-color-lighter);
         display: block;
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
         position: relative;
+        transition: all .5s ease;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.2);
+            background-color: var(--secondary-color);
+            color: var(--main-color-lighter);
+        }
     }
     &__icon{
         position: absolute;
@@ -54,15 +66,5 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-}
-
-.menu__hidden{
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    z-index: 1001;
 }
 

@@ -19,6 +19,9 @@
             height: 30rem;
             @include flex-column-center;
             border-radius: .5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 1s ease;
 
             &--1{
                 background-image: url('../../assets/images/os-melhores-anos.jpeg');
@@ -31,6 +34,10 @@
             &--3{
                 background-image: url('../../assets/images/baixa-chiado.jpeg');
                 @include bg-image-setup; 
+            }
+
+            &:hover{
+                transform: scale(1.1);
             }
         }
 }

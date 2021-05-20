@@ -1,3 +1,13 @@
+.menu__hidden{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    //transform: translateX(-100%);
+    z-index: 1001;
+}
+
 .menu{
     height: 100vh;
     background-color: rgba($color: #1d1d1d, $alpha: .991);
@@ -8,6 +18,10 @@
         width: 100%;
         height: 100%;
         position: relative;
+
+        .contact{
+            bottom: 28%;
+        }
     }
 
     &__list{
@@ -18,14 +32,36 @@
         transform: translateY(-50%);
     }
 
+    &__btn{
+        text-decoration: none;
+        color: var(--color-primary);
+        background-color: var(--main-color-lighter);
+        display: block;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        top: 2rem;
+        transition: all .5s ease;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.2);
+            background-color: var(--secondary-color);
+            color: var(--main-color-lighter);
+        }
+    }
+    &__icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     &__link{
         text-decoration: none;
         color: var(--color-primary);
-        font-size: 6rem;
+        font-size: 2.4rem;
         font-weight: 700;
     }
-
-    // &__item{
-
-    // }
 }
